@@ -1,0 +1,9 @@
+h1 Listing urls
+table
+  tr
+    th Links
+  - @urls.each do |url|
+    tr
+      td
+        a(href=url)=url
+
