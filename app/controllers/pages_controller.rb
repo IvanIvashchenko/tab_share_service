@@ -1,9 +1,7 @@
 class PagesController < ApplicationController
-  skip_before_filter :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
 
   def index
-    # title = params[:title]
-    url = params[:url]
-    @urls = [url]
+    @tabs = params[:data]
   end
-end  
+end

@@ -2,8 +2,8 @@ h1 Listing urls
 table
   tr
     th Links
-  - @urls.each do |url|
+  - @tabs.each do |key|
     tr
       td
-        a(href=url)=url
+        a(href=@tabs[key]['url'])=@tabs[key]['title']
 
