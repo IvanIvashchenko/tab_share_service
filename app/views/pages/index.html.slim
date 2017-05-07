@@ -1,0 +1,9 @@
+h1 Listing urls
+table
+  tr
+    th Links
+  - @tabs.each do |key|
+    tr
+      td
+        a(href=@tabs[key]['url'])=@tabs[key]['title']
+
