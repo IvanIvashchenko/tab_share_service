@@ -24,3 +24,5 @@ config/secrets.yml
 
 .ruby-gemset
 public/uploads/*
+public/pages/*
+!public/pages/.keep
