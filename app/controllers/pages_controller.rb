@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def index
     @tabs = params[:data]
     id = SecureRandom.hex
-    path = Rails.root.join('public', 'pagess', "#{id}.html")
+    path = Rails.root.join('public', 'pages', "#{id}.html")
     content = render_to_string 'index'
     File.open(path, 'w+') do |f|
       f.write(content)
@@ -15,6 +15,6 @@ class PagesController < ApplicationController
 
   def show
     id = params[:id]
-    render file: Rails.root.join('public', 'pagess', "#{id}.html")
+    render file: Rails.root.join('public', 'pages', "#{id}.html")
   end
 end
